@@ -1,0 +1,17 @@
+{
+	"name": "15-build",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "live-server",
+		"build": "rollup index.js --file bundle.js --format iife",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Aleksandr Gaponenko",
+	"license": "ISC",
+	"devDependencies": {
+		"live-server": "^1.2.2",
+		"rollup": "^4.9.6"
+	}
+}
