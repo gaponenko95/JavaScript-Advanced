@@ -12,9 +12,9 @@ class Personage {
 }
 
 class Orc extends Personage {
-	constructor(options) {
+	constructor(options, weapon) {
 		super(options);
-		this.weapon = options.weapon;
+		this.weapon = weapon;
 	}
 	speak() {
 		console.log(
@@ -27,9 +27,9 @@ class Orc extends Personage {
 }
 
 class Elf extends Personage {
-	constructor(options) {
+	constructor(options, spellType) {
 		super(options);
-		this.spellType = options.spellType;
+		this.spellType = spellType;
 	}
 	speak() {
 		console.log(
@@ -41,19 +41,20 @@ class Elf extends Personage {
 	}
 }
 
-const orc = new Orc({
+const orcOptions = {
 	race: 'Orc',
 	name: 'Trall',
 	language: 'Orcish',
-	weapon: 'Mace',
-});
+};
 
-const elf = new Elf({
+const elfOptions = {
 	race: 'Elf',
 	name: 'Malfurion',
 	language: 'Elvish',
-	spellType: 'Divine Ray',
-});
+};
+
+const orc = new Orc(orcOptions, 'Mace');
+const elf = new Elf(elfOptions, 'Divine Ray');
 
 orc.speak();
 elf.speak();
